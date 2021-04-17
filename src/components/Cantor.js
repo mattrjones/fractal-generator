@@ -4,7 +4,7 @@ export default function Cantor(){
 
     let coords = []
 
-   const genCantor = (x=0, y=10, length=1374) => {     
+   const genCantor = (x=0, y=50, length=window.innerWidth) => {     
     if (length >= 1) {
         coords = [...coords, {x:x,y:y,len:length}]
         y += 20;

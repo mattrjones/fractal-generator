@@ -1,10 +1,10 @@
 import './App.css';
-import Cantor from './components/Cantor'
+import Selector from './components/Selector'
 
 function App() {
   return (
     <div className="App">
-      <Cantor />
+      <Selector />
     </div>
   );
 }
