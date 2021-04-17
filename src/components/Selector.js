@@ -11,8 +11,13 @@ export default function Selector() {
         setFractal(nextFractal)
     }
 
-    const showCantor = () => {
-        return <div><Cantor /></div>
+    const showFractal = () => {
+        switch(fractal){
+            case "Cantor":
+                return <div><Cantor /></div>
+            default: 
+                break;
+        }
     }
 
     const handleChange = event => {
@@ -28,7 +33,7 @@ export default function Selector() {
         </select>
         <input type="submit" value="Generate Fractal" />
         </form>
-        {fractal === "Cantor" ? showCantor() : null}
+        {showFractal()}
     </div>
     )
 
