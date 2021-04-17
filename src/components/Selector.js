@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import Cantor from './Cantor'
+import Koch from './Koch'
 
 export default function Selector() {
     const[fractal, setFractal] = useState("")
     const[nextFractal, setNextFractal] = useState("Cantor")
 
     const handleSubmit = event => {
-        debugger;
         event.preventDefault();
         setFractal(nextFractal)
     }
@@ -15,6 +15,8 @@ export default function Selector() {
         switch(fractal){
             case "Cantor":
                 return <div><Cantor /></div>
+            case "Koch":
+                return <div><Koch /></div>
             default: 
                 break;
         }
@@ -29,7 +31,8 @@ export default function Selector() {
         <form onSubmit={handleSubmit}>
         <select value={nextFractal} onChange={handleChange}>
         <option value="Cantor">Cantor</option>
-        <option value="Blah">Blah</option>
+        <option value="Koch">Koch</option>
+        <option value="None">None</option>
         </select>
         <input type="submit" value="Generate Fractal" />
         </form>
